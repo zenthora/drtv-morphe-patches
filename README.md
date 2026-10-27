@@ -47,3 +47,24 @@ If you install from Play as split APKs, pass a merged universal APK instead.
 ## Use with Morphe Manager
 
 Add `patches/build/libs/patches-<version>.mpp` as a local patch source, choose DRTV, and apply **Dark theme**.
+
+## 🩹 Patches list
+
+<!-- PATCHES_START EXPANDED -->
+> **[v1.0.0](https://github.com/zenthora/drtv-morphe-patches/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+<details open>
+<summary>📺 DRTV (Android TV)&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+**🎯 Supported versions:**
+
+| 4.39.0 |
+| :---: |
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Dark theme](#dark-theme) | Applies a permanent dark theme across all views, cards, carousels, and dialogs in DRTV. |  |
+
+</details>
+
+<!-- PATCHES_END -->
