@@ -2,6 +2,7 @@ rootProject.name = "morphe-patches-template"
 
 pluginManagement {
     repositories {
+        mavenLocal()
         gradlePluginPortal()
         google()
         maven {

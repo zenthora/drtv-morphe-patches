@@ -1,25 +1,23 @@
 group = "app.template"
 
 patches {
-    // TODO: Update this section with your project details.
     about {
-        name = "UserXYZ Patches"
-        description = "Patches for apps I like"
-        source = "git@github.com:UserXYZ/morphe-patches.git"
-        author = "Awesome dev"
+        name = "DRTV Morphe Patches"
+        description = "Permanent dark mode patch for the DRTV Android TV app (dk.dr.tvplayer)"
+        source = "https://github.com/zenthora/drtv-morphe-patches.git"
+        author = "zenthora"
         contact = "na"
-        website = "na"
+        website = "https://github.com/zenthora/drtv-morphe-patches"
         license = "GPLv3"
     }
 }
 
-// Separate configuration so gson is available at runtime for the
-// generatePatchesList task but never bundled into the APK.
 val patchListGeneratorClasspath = configurations.create("patchListGeneratorClasspath")
 
 dependencies {
     compileOnly(libs.gson)
     patchListGeneratorClasspath(libs.gson)
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 }
 
 tasks {
@@ -32,8 +30,18 @@ tasks {
         mainClass.set("util.PatchListGeneratorKt")
     }
 
-    // Used by gradle-semantic-release-plugin.
+    register<JavaExec>("verifyPatch") {
+        description = "Verify the built .mpp patch bundle against the APK in the DRTV_APK env var"
+        dependsOn("buildAndroid")
+        classpath = sourceSets["test"].runtimeClasspath
+        mainClass.set("util.VerifyPatchKt")
+    }
+
     publish {
         dependsOn("generatePatchesList")
     }
+}
+
+tasks.test {
+    failOnNoDiscoveredTests = false
 }
