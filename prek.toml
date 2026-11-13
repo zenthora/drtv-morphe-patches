@@ -25,6 +25,13 @@ hooks = [
 repo = "local"
 
 [[repos.hooks]]
+id = "ktlint"
+name = "ktlint"
+language = "system"
+entry = "ktlint --format"
+types = ["kotlin"]
+
+[[repos.hooks]]
 id = "conventional-commit"
 name = "conventional commit"
 language = "system"
