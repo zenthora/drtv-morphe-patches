@@ -5,7 +5,7 @@ Built from [morphe-patches-template](https://github.com/morpheapp/morphe-patches
 
 | Patch | Package | Tested version | Form factor |
 |---|---|---|---|
-| Dark theme | `dk.dr.tvplayer` | 4.39.0 (versionCode 439000) | TV |
+| Dark theme | `dk.dr.tvplayer` | 4.39.0 (439000), 4.40.4 (440400) | TV |
 
 Other versions are marked as experimental. The fingerprints match on method/class names and resource IDs, so they may still work after small app updates.
 
@@ -58,8 +58,8 @@ Add `patches/build/libs/patches-<version>.mpp` as a local patch source, choose D
 
 **🎯 Supported versions:**
 
-| 4.39.0 |
-| :---: |
+| 4.39.0 | 4.40.4 |
+| :---: | :---: |
 
 | 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
 |----------|----------------|-----------|
